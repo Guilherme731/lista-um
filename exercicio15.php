@@ -22,7 +22,23 @@
 
                 $imc = $peso / (pow($altura, 2));
 
-                echo "Seu IMC é $imc";
+                echo "<p> Seu IMC é $imc </p>";
+
+                $situacao = '';
+
+                if($imc < 18.5){
+                    $situacao = 'abaixo do peso';
+                }else if($imc < 25){
+                    $situacao = 'normal';
+                }else if($imc < 30){
+                    $situacao = 'sobrepeso';
+                }else if($imc < 40){
+                    $situacao = 'obesidade';
+                }else{
+                    $situacao = 'obesidade severa';
+                }
+
+                echo "<p> Sua situação é $situacao </p>";
                 
 
             }
